@@ -1,0 +1,23 @@
+- VS code - Editor de texto
+https://code.visualstudio.com/
+dpkg -i code_1.26.1-1534444688_amd64.deb
+instalalar extensões python e magic python
+
+- configuração do console do python para evitar erros
+"UnicodeEncodeError: 'ascii' codec can't encode character '\xc9' in position 10: ordinal not in range(128)"
+dpkg-reconfigure locales
+
+- permitir execução do arquivo
+chmod +x hello.py
+
+- macete para pegar a xbang
+echo \#\!$(which python3) > hello2.py; chmod +x hello.py
+
+- como saber os metodos de uma variavel
+dir(variavel)
+
+-fatiamento de lista
+lista[1:-1] #o primeiro número é inclusivo o segundo é exclusivo
+
+http://dontpad.com/4linux/520 é um devops
+https://1drv.ms/b/s!AkrLlnCoIiivlmRsp-lbLDPyTus7

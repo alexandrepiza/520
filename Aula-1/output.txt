@@ -1,0 +1,407 @@
+developer@developer:~$ python3 --version
+Python 3.5.3
+developer@developer:~$ python --version
+Python 2.7.13
+developer@developer:~$ python3
+\Python 3.5.3 (default, Jan 19 2017, 14:11:04) 
+[GCC 6.3.0 20170118] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> print('hello world')
+hello world
+>>> print(4+5)
+9
+>>> print(2^2)
+0
+>>> print('hello world')
+hello world
+>>> print(2exp2)
+  File "<stdin>", line 1
+    print(2exp2)
+              ^
+SyntaxError: invalid syntax
+>>> exit ()
+developer@developer:~$ python
+Python 2.7.13 (default, Jan 19 2017, 14:48:08) 
+[GCC 6.3.0 20170118] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> print'hello world'
+hello world
+>>> exit()
+developer@developer:~$ python3
+Python 3.5.3 (default, Jan 19 2017, 14:11:04) 
+[GCC 6.3.0 20170118] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> exit()
+developer@developer:~$ which python3
+/usr/bin/python3
+developer@developer:~$ which python
+/usr/bin/python
+developer@developer:~$ which python3
+/usr/bin/python3
+developer@developer:~$ python3
+Python 3.5.3 (default, Jan 19 2017, 14:11:04) 
+[GCC 6.3.0 20170118] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 'help'
+'help'
+>>> "help"
+'help'
+>>> help
+Type help() for interactive help, or help(object) for help about object.
+>>> 
+>>> exit
+Use exit() or Ctrl-D (i.e. EOF) to exit
+>>> exit()
+developer@developer:~$ cat /etc/*-release
+PRETTY_NAME="Debian GNU/Linux 9 (stretch)"
+NAME="Debian GNU/Linux"
+VERSION_ID="9"
+VERSION="9 (stretch)"
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+developer@developer:~$ cd Do
+Documentos/ Downloads/  
+developer@developer:~$ cd Do
+Documentos/ Downloads/  
+developer@developer:~$ cd Downloads/
+developer@developer:~/Downloads$ ls
+eclipse-installer
+developer@developer:~/Downloads$ cd eclipse-installer/
+developer@developer:~/Downloads/eclipse-installer$ ls
+artifacts.xml  eclipse-inst      features  p2       readme
+configuration  eclipse-inst.ini  icon.xpm  plugins
+developer@developer:~/Downloads/eclipse-installer$ 
+developer@developer:~/Downloads/eclipse-installer$ sudo su
+root@developer:/home/developer/Downloads/eclipse-installer# cd ..
+root@developer:/home/developer/Downloads# 
+root@developer:/home/developer/Downloads# ls
+eclipse-installer
+root@developer:/home/developer/Downloads# ls
+code_1.26.1-1534444688_amd64.deb  eclipse-installer
+root@developer:/home/developer/Downloads# dpkg -i code_1.26.1-1534444688_amd64.deb 
+A seleccionar pacote anteriormente não seleccionado code.
+(Lendo banco de dados ... 176347 ficheiros e directórios actualmente instalados.)
+A preparar para desempacotar code_1.26.1-1534444688_amd64.deb ...
+A descompactar code (1.26.1-1534444688) ...
+Configurando code (1.26.1-1534444688) ...
+A processar 'triggers' para desktop-file-utils (0.23-1) ...
+A processar 'triggers' para mime-support (3.60) ...
+root@developer:/home/developer/Downloads# 
+root@developer:/home/developer/Downloads# exit
+exit
+developer@developer:~/Downloads/eclipse-installer$ cd ..
+developer@developer:~/Downloads$ ls
+code_1.26.1-1534444688_amd64.deb  eclipse-installer
+developer@developer:~/Downloads$ cd ..
+developer@developer:~$ ls
+Área de trabalho  Downloads  Imagens  Música   Vídeos
+Documentos        eclipse    Modelos  Público  workspace
+developer@developer:~$ mkdir 520
+developer@developer:~$ ls
+520               Documentos  eclipse  Modelos  Público  workspace
+Área de trabalho  Downloads   Imagens  Música   Vídeos
+developer@developer:~$ cd 520
+developer@developer:~/520$ ls
+developer@developer:~/520$ 
+developer@developer:~/520$ ls
+hello.py
+developer@developer:~/520$ ./hello.py
+bash: ./hello.py: Permissão negada
+developer@developer:~/520$ python3 hello.py 
+hello world
+developer@developer:~/520$ sudo su
+root@developer:/home/developer/520# dpkg-reconfigure locales
+^[[A^[[A^[[A^[[B^[[B^[[BGenerating locales (this might take a while)...
+ done               
+  pt_BR.UTF-8... done
+Generation complete.
+root@developer:/home/developer/520# dpkg -i code_1.26.1-1534444688_amd64.deb^C
+root@developer:/home/developer/520# exit
+exit
+developer@developer:~/520$ python3
+Python 3.5.3 (default, Jan 19 2017, 14:11:04) 
+[GCC 6.3.0 20170118] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> nome = 'Alexandre'
+>>> nome.replace('a','@')
+'Alex@ndre'
+>>> nome.islower()
+False
+>>> nome.isupper()
+False
+>>> nome.title()
+'Alexandre'
+>>> nome = '    alexandre  '
+>>> nome.strip()
+'alexandre'
+>>> nome.strip()=='alexandre'
+True
+>>> nome = '    alexAndre  '
+>>> nome.strip().lower()=='alexandre'
+True
+>>> 
+KeyboardInterrupt
+>>> exit
+Use exit() or Ctrl-D (i.e. EOF) to exit
+>>> exit
+Use exit() or Ctrl-D (i.e. EOF) to exit
+>>> exit()
+developer@developer:~/520$ python3
+Python 3.5.3 (default, Jan 19 2017, 14:11:04) 
+[GCC 6.3.0 20170118] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> nome = 'alexandre piza'
+>>> nome.split()
+['alexandre', 'piza']
+>>> nome.split('a')
+['', 'lex', 'ndre piz', '']
+>>> 
+KeyboardInterrupt
+>>> nome.startswith('a')
+True
+>>> nome.startswith('ali')
+False
+>>> '.'.join(nome)
+'a.l.e.x.a.n.d.r.e. .p.i.z.a'
+>>> lista=['a','b','c','d']
+>>> type(lista)
+<class 'list'>
+>>> dir(lista)
+['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+>>> lista[0]
+'a'
+>>> lista[2]
+'c'
+>>> lista=['a','b','c','d',[]]
+>>> lista[-1]
+[]
+>>> lista[-2]
+'d'
+>>> lista=['a','b','c','d',['e']]
+>>> lista[-1][0]
+'e'
+>>> lista2 = lista
+>>> lista
+['a', 'b', 'c', 'd', ['e']]
+>>> lista[-1]='e'
+>>> lista
+['a', 'b', 'c', 'd', 'e']
+>>> lista2
+['a', 'b', 'c', 'd', 'e']
+>>> lista2=lista[:]
+>>> lista[-1]='g'
+>>> lista
+['a', 'b', 'c', 'd', 'g']
+>>> lista2
+['a', 'b', 'c', 'd', 'e']
+>>> lista2[1:-1]
+['b', 'c', 'd']
+>>> lista2[1:]
+['b', 'c', 'd', 'e']
+>>> 
+KeyboardInterrupt
+>>> nome
+'alexandre piza'
+>>> nome[:]
+'alexandre piza'
+>>> nome[1:-1]
+'lexandre piz'
+>>> 
+KeyboardInterrupt
+>>> lista
+['a', 'b', 'c', 'd', 'g']
+>>> dir lista
+  File "<stdin>", line 1
+    dir lista
+            ^
+SyntaxError: invalid syntax
+>>> dir(lista)
+['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+>>> lista.append('f')
+>>> lista
+['a', 'b', 'c', 'd', 'g', 'f']
+>>> lista.insert(1,'b')
+>>> lista
+['a', 'b', 'b', 'c', 'd', 'g', 'f']
+>>> lista.pop()
+'f'
+>>> lista.pop(2)
+'b'
+>>> lista
+['a', 'b', 'c', 'd', 'g']
+>>> lista.insert(0,'z')
+>>> lista.insert(0,'y')
+>>> lista
+['y', 'z', 'a', 'b', 'c', 'd', 'g']
+>>> lista.sort
+<built-in method sort of list object at 0x7fe68ac78248>
+>>> lista.sort()
+>>> lista
+['a', 'b', 'c', 'd', 'g', 'y', 'z']
+>>> 
+KeyboardInterrupt
+>>> 
+KeyboardInterrupt
+>>> lista.insert(0,'Z')
+>>> lista.insert(0,'A')
+>>> lista.sort()
+>>> lista
+['A', 'Z', 'a', 'b', 'c', 'd', 'g', 'y', 'z']
+>>> ord('Z')
+90
+>>> ord('a')
+97
+>>> ord('A')
+65
+>>> chr(98)
+'b'
+>>> lista.index('Z')
+1
+>>> lista.index('A')
+0
+>>> lista.count('z')
+1
+>>> len(lista)
+9
+>>> 
+>>> clear
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'clear' is not defined
+>>> cls
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'cls' is not defined
+>>> lista..remove(-3)
+  File "<stdin>", line 1
+    lista..remove(-3)
+          ^
+SyntaxError: invalid syntax
+>>> lista.remove(-3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: list.remove(x): x not in list
+>>> lista.remove(4)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: list.remove(x): x not in list
+>>> lista.remove
+<built-in method remove of list object at 0x7fe68ac78248>
+>>> tupla = ('python', 'java', 'golang')
+>>> tupla[0]
+'python'
+>>> tupla[2]
+'golang'
+>>> tupla[0]='Python'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+>>> dic={'nome':'alexandre','ling1':'python','ling2':'golanf'}
+>>> dic['nome']
+'alexandre'
+>>> dic['nome']='piza'
+>>> dic
+{'ling2': 'golanf', 'nome': 'piza', 'ling1': 'python'}
+>>> dir(dic)
+['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+>>> ling['aaa']
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'ling' is not defined
+>>> dic['aaa']
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'aaa'
+>>> dic.get['aaa']
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'builtin_function_or_method' object is not subscriptable
+>>> dic.get('aaa')
+>>> dic.get('nome')
+'piza'
+>>> # Com o metodo get qdo não temos a chave ele retorna o valor null.
+... 
+>>> 'Seja bem vindo {}'.format(nome)
+'Seja bem vindo alexandre piza'
+>>> 'Seja bem vindo '+nome
+'Seja bem vindo alexandre piza'
+>>> 'Seja bem vindo {0} {0}'.format(nome)
+'Seja bem vindo alexandre piza alexandre piza'
+>>> 'Seja bem vindo {nome} {nome}'.format(nome=nome)
+'Seja bem vindo alexandre piza alexandre piza'
+>>> nome, sobrenome = 'alexandre', 'piza'
+>>> #converter para texto
+... 
+>>> num=3
+>>> nome+num
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: Can't convert 'int' object to str implicitly
+>>> nome+str(num)
+'alexandre3'
+>>> num.isnumeric()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'int' object has no attribute 'isnumeric'
+>>> num
+3
+>>> num.isnumeric()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'int' object has no attribute 'isnumeric'
+>>> num='3'
+>>> num.isnumeric()
+True
+>>> # o metodo isnumeric é para texto
+... float(num)
+3.0
+>>> int(num)
+3
+>>> bin(num)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object cannot be interpreted as an integer
+>>> num=int(num)
+>>> bin(num)
+'0b11'
+>>> hex(num)
+'0x3'
+>>> str(num)
+'3'
+>>> num
+3
+>>> dic.keys()
+dict_keys(['ling2', 'nome', 'ling1'])
+>>> list(dic.keys())
+['ling2', 'nome', 'ling1']
+>>> a=list(dic.keys())
+>>> tuple(a)
+('ling2', 'nome', 'ling1')
+>>> type(a)
+<class 'list'>
+>>> type(tuple(a))
+<class 'tuple'>
+>>> 
+>>> type(dic)
+<class 'dict'>
+>>> # Potencia se usa **
+... 
+>>> 3**3
+27
+>>> # Divisão inteira
+... 
+>>> 10//3
+3
+>>> 
+>>> n1=5
+>>> n2=3
+>>> n1=n1+3
+>>> #forma abreviada
+... n1+=3
+>>> n1
+11
+>>> n1*=2
+>>> n1
+22
