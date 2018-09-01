@@ -21,3 +21,17 @@ lista[1:-1] #o primeiro número é inclusivo o segundo é exclusivo
 
 http://dontpad.com/4linux/520 é um devops
 https://1drv.ms/b/s!AkrLlnCoIiivlmRsp-lbLDPyTus7
+
+GITHUB Comandos
+git init # Inicia o projeto
+git status # Verifica o status
+git add . # Adiciona arquivos
+git commit -m 'mensagem' # Commita
+git remote add origin https://github.com/alexandrepiza/520.git # seta o repositorio
+git push origin master # Subir para nuvem
+git pull # Atualiza repositorio local com a nuvem
+
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+
+git clone https://github.com/alexandrepiza/520.git # baixa os arquivos na máquina nova

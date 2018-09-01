@@ -11,7 +11,7 @@ print('numeros pares: ',par)
 
 #ou
 
-par2=[z for z in numeros if z % 2 ==0]
+par2=[z for z in numeros if z % 2 ==0] #A primeira variavel z ela é acumulativa
 print('numeros pares2: ',par2)
 
 
