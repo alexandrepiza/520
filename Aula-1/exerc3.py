@@ -3,6 +3,7 @@
 numeros = [1,5,2,6,8,9,1002,3041,762]
 par=[]
 impares=[]
+impar=[]
 for i in numeros:
     if i%2==0:
         par.append(i)
@@ -20,3 +21,13 @@ for x in numeros:
         impares.append(x)
 
 print('numeros impares: ',impares)
+
+#Solução 2
+print('Solução 2')
+
+for y in numeros:
+    if y % 2 == 0:
+        continue
+    impar.append(y)
+
+print(impar)
