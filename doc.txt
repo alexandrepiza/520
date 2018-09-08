@@ -21,3 +21,15 @@ lista[1:-1] #o primeiro número é inclusivo o segundo é exclusivo
 
 http://dontpad.com/4linux/520 é um devops
 https://1drv.ms/b/s!AkrLlnCoIiivlmRsp-lbLDPyTus7
+
+sudo su
+systemctl stop jenkins
+systemctl stop postgresql
+systemctl stop mongodb
+systemctl stop mysql
+
+systemctl disable
+
+ss -ntlp
+echo \#\!$(which python3) > arquivo.py
+chmod +x $(ls)
