@@ -1,0 +1,746 @@
+developer@developer:~/520$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+developer@developer:~/520$ git pull
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 1), reused 4 (delta 1), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+From https://github.com/alexandrepiza/520
+   a07a960..38c819a  master     -> origin/master
+Updating a07a960..38c819a
+Fast-forward
+ Aula-1/exerc5.py | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+developer@developer:~/520$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+developer@developer:~/520$ ls
+Aula-1
+developer@developer:~/520$ mkdir Aula-2
+developer@developer:~/520$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+developer@developer:~/520$ cd Aula-1
+developer@developer:~/520/Aula-1$ python3 exerc5.py
+30
+Outra solução
+1
+Traceback (most recent call last):
+  File "exerc5.py", line 24, in <module>
+    count += 1
+NameError: name 'count' is not defined
+developer@developer:~/520/Aula-1$ python3 exerc5.py
+30
+Outra solução
+1
+5
+9
+developer@developer:~/520/Aula-1$ python3 exerc5.py
+30
+Outra solução
+3
+5
+7
+developer@developer:~/520/Aula-1$ python3 exerc5.py
+30
+Outra solução
+1
+3
+5
+5
+9
+7
+developer@developer:~/520/Aula-1$ python3 exerc5.py
+30
+Outra solução
+30
+developer@developer:~/520/Aula-1$ python3 exerc5.py
+30
+Outra solução
+30
+Outra solução
+30
+developer@developer:~/520/Aula-1$ python3 exerc5.py
+Solução 1
+30
+Solução 2
+30
+Solução 3
+30
+Solução 4
+30
+developer@developer:~/520/Aula-1$ cd ..
+developer@developer:~/520$ cd Aula-2
+developer@developer:~/520/Aula-2$ ls
+exerc1.py
+developer@developer:~/520/Aula-2$ python3 exerc1.py
+Digite um nome: maria
+Achei
+developer@developer:~/520/Aula-2$ python3 exerc1.py
+Digite um nome: Maria
+Achei
+developer@developer:~/520/Aula-2$ python3 exerc1.py
+Digite um nome: jonas
+Não Achei
+developer@developer:~/520/Aula-2$ cd ../Aula-1
+developer@developer:~/520/Aula-1$ python3 exerc3.py
+numeros pares:  [2, 6, 8, 1002, 762]
+numeros pares2:  [2, 6, 8, 1002, 762]
+numeros impares:  [1, 5, 9, 3041]
+Solução 2
+Traceback (most recent call last):
+  File "exerc3.py", line 30, in <module>
+    impar.append(x)
+NameError: name 'impar' is not defined
+developer@developer:~/520/Aula-1$ python3 exerc3.py
+numeros pares:  [2, 6, 8, 1002, 762]
+numeros pares2:  [2, 6, 8, 1002, 762]
+numeros impares:  [1, 5, 9, 3041]
+Solução 2
+[1, 5, 9, 3041, 1, 5, 9, 3041]
+developer@developer:~/520/Aula-1$ python3 exerc3.py
+numeros pares:  [2, 6, 8, 1002, 762]
+numeros pares2:  [2, 6, 8, 1002, 762]
+numeros impares:  [1, 5, 9, 3041]
+Solução 2
+[1, 5, 9, 3041, 762, 762, 762, 762]
+developer@developer:~/520/Aula-1$ python3 exerc3.py
+numeros pares:  [2, 6, 8, 1002, 762]
+numeros pares2:  [2, 6, 8, 1002, 762]
+numeros impares:  [1, 5, 9, 3041]
+Solução 2
+[1, 5, 9, 3041, 1, 5, 9, 3041]
+developer@developer:~/520/Aula-1$ python3 exerc3.py
+numeros pares:  [2, 6, 8, 1002, 762]
+numeros pares2:  [2, 6, 8, 1002, 762]
+numeros impares:  [1, 5, 9, 3041]
+Solução 2
+[1, 5, 9, 3041]
+developer@developer:~/520/Aula-1$ cd ../Aula-2
+developer@developer:~/520/Aula-2$ python3 exerc2.py
+Digite quantidade de notas: 5
+Traceback (most recent call last):
+  File "exerc2.py", line 3, in <module>
+    for x in qtnotas:
+TypeError: 'int' object is not iterable
+developer@developer:~/520/Aula-2$ python3 exerc2.py
+Digite quantidade de notas: 5
+Traceback (most recent call last):
+  File "exerc2.py", line 3, in <module>
+    for x in qtnotas:
+TypeError: 'int' object is not iterable
+developer@developer:~/520/Aula-2$ python3 exerc2.py
+Digite quantidade de notas: 5
+Digite a nota: 4
+Traceback (most recent call last):
+  File "exerc2.py", line 5, in <module>
+    total += nota
+NameError: name 'total' is not defined
+developer@developer:~/520/Aula-2$ python3 exerc2.py
+Digite quantidade de notas: 5
+Digite a nota: 4
+Traceback (most recent call last):
+  File "exerc2.py", line 8, in <module>
+    media = total/qtnotas
+TypeError: unsupported operand type(s) for /: 'float' and 'str'
+developer@developer:~/520/Aula-2$ python3 exerc2.py
+Digite quantidade de notas: 5
+Traceback (most recent call last):
+  File "exerc2.py", line 4, in <module>
+    for x in qtnotas:
+TypeError: 'float' object is not iterable
+developer@developer:~/520/Aula-2$ python3 exerc2.py
+Digite quantidade de notas: 5
+Digite a nota: 4
+Traceback (most recent call last):
+  File "exerc2.py", line 8, in <module>
+    media = total/qtnotas
+TypeError: unsupported operand type(s) for /: 'float' and 'str'
+developer@developer:~/520/Aula-2$ python3 exerc2.py
+Digite quantidade de notas: 5
+Traceback (most recent call last):
+  File "exerc2.py", line 5, in <module>
+    for x in qtnotas:
+TypeError: 'float' object is not iterable
+developer@developer:~/520/Aula-2$ python3 exerc2.py
+  File "exerc2.py", line 5
+    for x <= qtnotas:
+           ^
+SyntaxError: invalid syntax
+developer@developer:~/520/Aula-2$ python3 exerc2.py
+  File "exerc2.py", line 5
+    for x = qtnotas:
+          ^
+SyntaxError: invalid syntax
+developer@developer:~/520/Aula-2$ python3 exerc2.py
+Digite quantidade de notas: 5
+Traceback (most recent call last):
+  File "exerc2.py", line 5, in <module>
+    for x in range (qtnotas):
+TypeError: 'float' object cannot be interpreted as an integer
+developer@developer:~/520/Aula-2$ python3 exerc2.py
+Digite quantidade de notas: 5
+Traceback (most recent call last):
+  File "exerc2.py", line 5, in <module>
+    for x in range (qtnotas):
+TypeError: 'float' object cannot be interpreted as an integer
+developer@developer:~/520/Aula-2$ python3 exerc2.py
+Digite quantidade de notas: 5
+Digite a nota: 4
+Traceback (most recent call last):
+  File "exerc2.py", line 7, in <module>
+    total += nota
+NameError: name 'total' is not defined
+developer@developer:~/520/Aula-2$ python3 exerc2.py
+Digite quantidade de notas: 5
+Digite a nota: 4
+Digite a nota: 6
+Digite a nota: 8
+Digite a nota: 2
+Digite a nota: 4
+Média:  4.8
+Recuperação
+developer@developer:~/520/Aula-2$ python3 exerc2.py
+Digite quantidade de notas: 5
+Traceback (most recent call last):
+  File "exerc2.py", line 6, in <module>
+    nota = float(input('Digite a nota ', x,': '))
+TypeError: input expected at most 1 arguments, got 3
+developer@developer:~/520/Aula-2$ python3 exerc2.py
+Digite quantidade de notas: 5
+Traceback (most recent call last):
+  File "exerc2.py", line 6, in <module>
+    nota = float(input('Digite a nota ', x))
+TypeError: input expected at most 1 arguments, got 2
+developer@developer:~/520/Aula-2$ python3 exerc2.py
+Digite quantidade de notas: 5
+
+Traceback (most recent call last):
+  File "exerc2.py", line 6, in <module>
+    print('Digite a nota ', x,': ',nota = float(input()))
+ValueError: could not convert string to float:
+developer@developer:~/520/Aula-2$ python3 exerc2.py
+  File "exerc2.py", line 7
+    nota = float(input()))
+                         ^
+SyntaxError: invalid syntax
+developer@developer:~/520/Aula-2$ python3 exerc2.py
+Digite quantidade de notas: 5
+Digite a nota  0 :
+^[[A^[[A^[[A
+Traceback (most recent call last):
+  File "exerc2.py", line 7, in <module>
+    nota = float(input())
+ValueError: could not convert string to float: '\x1b[A\x1b[A\x1b[A'
+developer@developer:~/520/Aula-2$ python3 exerc2.py
+Digite quantidade de notas: 5
+Digite a nota  1 :
+4
+Digite a nota  2 :
+4
+Digite a nota  3 :
+4
+Digite a nota  4 :
+4
+Digite a nota  5 :
+4
+Média:  4.0
+Recuperação
+developer@developer:~/520/Aula-2$ python3 exerc2.py
+Digite quantidade de notas: 5
+Digite a nota 1 :
+4
+Digite a nota 2 :
+6
+Digite a nota 3 :
+8
+Digite a nota 4 :
+10
+Digite a nota 5 :
+8
+Média:
+Aprovado
+developer@developer:~/520/Aula-2$ python3 exerc2.py
+Digite quantidade de notas: 8
+Digite a nota 1 :
+7
+Digite a nota 2 :
+8
+Digite a nota 3 :
+7
+Digite a nota 4 :
+8
+Digite a nota 5 :
+8
+Digite a nota 6 :
+7
+Digite a nota 7 :
+7
+Digite a nota 8 :
+8
+Média:  7.5
+Aprovado
+developer@developer:~/520/Aula-2$ sudo apt-get
+autoclean        changelog        dist-upgrade     install          source
+autoremove       check            download         purge            update
+build-dep        clean            dselect-upgrade  remove           upgrade
+developer@developer:~/520/Aula-2$ sudo apt-get
+autoclean        changelog        dist-upgrade     install          source
+autoremove       check            download         purge            update
+build-dep        clean            dselect-upgrade  remove           upgrade
+developer@developer:~/520/Aula-2$ sudo apt-get install ipython
+ipython             ipython3            ipython3-qtconsole  ipython-qtconsole
+developer@developer:~/520/Aula-2$ sudo apt-get install ipython
+ipython             ipython3            ipython3-qtconsole  ipython-qtconsole
+developer@developer:~/520/Aula-2$ sudo apt-get install ipython3
+Lendo listas de pacotes... Pronto
+Construindo árvore de dependências
+Lendo informação de estado... Pronto
+The following additional packages will be installed:
+  python-pexpect python-ptyprocess python3-decorator python3-ipython python3-ipython-genutils python3-pexpect python3-pickleshare
+  python3-prompt-toolkit python3-ptyprocess python3-pygments python3-simplegeneric python3-traitlets python3-wcwidth
+Pacotes sugeridos:
+  python-pexpect-doc ttf-bitstream-vera
+Os NOVOS pacotes a seguir serão instalados:
+  ipython3 python-pexpect python-ptyprocess python3-decorator python3-ipython python3-ipython-genutils python3-pexpect
+  python3-pickleshare python3-prompt-toolkit python3-ptyprocess python3-pygments python3-simplegeneric python3-traitlets
+  python3-wcwidth
+0 pacotes atualizados, 14 pacotes novos instalados, 0 a serem removidos e 186 não atualizados.
+É preciso baixar 1,392 kB de arquivos.
+Depois desta operação, 7,188 kB adicionais de espaço em disco serão usados.
+Você quer continuar? [Y/n] y
+Obter:1 http://ftp.br.debian.org/debian stretch/main amd64 python3-decorator all 4.0.11-1 [13.3 kB]
+Obter:2 http://ftp.br.debian.org/debian stretch/main amd64 python3-ptyprocess all 0.5.1-1 [12.6 kB]
+Obter:3 http://ftp.br.debian.org/debian stretch/main amd64 python3-pexpect all 4.2.1-1 [48.6 kB]
+Obter:4 http://ftp.br.debian.org/debian stretch/main amd64 python3-pickleshare all 0.7.4-1 [6,808 B]
+Obter:5 http://ftp.br.debian.org/debian stretch/main amd64 python3-wcwidth all 0.1.7+dfsg1-1 [14.7 kB]
+Obter:6 http://ftp.br.debian.org/debian stretch/main amd64 python3-prompt-toolkit all 1.0.9-1 [174 kB]
+Obter:7 http://ftp.br.debian.org/debian stretch/main amd64 python3-pygments all 2.2.0+dfsg-1 [588 kB]
+Obter:8 http://ftp.br.debian.org/debian stretch/main amd64 python3-simplegeneric all 0.8.1-1 [11.4 kB]
+Obter:9 http://ftp.br.debian.org/debian stretch/main amd64 python3-ipython-genutils all 0.1.0-2 [20.8 kB]
+Obter:10 http://ftp.br.debian.org/debian stretch/main amd64 python3-traitlets all 4.3.1-1 [60.6 kB]
+Obter:11 http://ftp.br.debian.org/debian stretch/main amd64 python-ptyprocess all 0.5.1-1 [12.5 kB]
+Obter:12 http://ftp.br.debian.org/debian stretch/main amd64 python-pexpect all 4.2.1-1 [47.9 kB]
+Obter:13 http://ftp.br.debian.org/debian stretch/main amd64 python3-ipython all 5.1.0-3 [375 kB]
+Obter:14 http://ftp.br.debian.org/debian stretch/main amd64 ipython3 all 5.1.0-3 [5,510 B]
+Baixados 1,392 kB em 1s (993 kB/s)
+debconf: incapaz de inicializar interface: Dialog
+debconf: (A interface dialog requer uma tela de pelo menos 13 linhas de altura e 31 colunas de largura.)
+debconf: tentando com interface: Readline
+A seleccionar pacote anteriormente não seleccionado python3-decorator.
+(Lendo banco de dados ... 186355 ficheiros e directórios actualmente instalados.)
+A preparar para desempacotar .../00-python3-decorator_4.0.11-1_all.deb ...
+A descompactar python3-decorator (4.0.11-1) ...
+A seleccionar pacote anteriormente não seleccionado python3-ptyprocess.
+A preparar para desempacotar .../01-python3-ptyprocess_0.5.1-1_all.deb ...
+A descompactar python3-ptyprocess (0.5.1-1) ...
+A seleccionar pacote anteriormente não seleccionado python3-pexpect.
+A preparar para desempacotar .../02-python3-pexpect_4.2.1-1_all.deb ...
+A descompactar python3-pexpect (4.2.1-1) ...
+A seleccionar pacote anteriormente não seleccionado python3-pickleshare.
+A preparar para desempacotar .../03-python3-pickleshare_0.7.4-1_all.deb ...
+A descompactar python3-pickleshare (0.7.4-1) ...
+A seleccionar pacote anteriormente não seleccionado python3-wcwidth.
+A preparar para desempacotar .../04-python3-wcwidth_0.1.7+dfsg1-1_all.deb ...
+A descompactar python3-wcwidth (0.1.7+dfsg1-1) ...
+A seleccionar pacote anteriormente não seleccionado python3-prompt-toolkit.
+A preparar para desempacotar .../05-python3-prompt-toolkit_1.0.9-1_all.deb ...
+A descompactar python3-prompt-toolkit (1.0.9-1) ...
+A seleccionar pacote anteriormente não seleccionado python3-pygments.
+A preparar para desempacotar .../06-python3-pygments_2.2.0+dfsg-1_all.deb ...
+A descompactar python3-pygments (2.2.0+dfsg-1) ...
+A seleccionar pacote anteriormente não seleccionado python3-simplegeneric.
+A preparar para desempacotar .../07-python3-simplegeneric_0.8.1-1_all.deb ...
+A descompactar python3-simplegeneric (0.8.1-1) ...
+A seleccionar pacote anteriormente não seleccionado python3-ipython-genutils.
+A preparar para desempacotar .../08-python3-ipython-genutils_0.1.0-2_all.deb ...
+A descompactar python3-ipython-genutils (0.1.0-2) ...
+A seleccionar pacote anteriormente não seleccionado python3-traitlets.
+A preparar para desempacotar .../09-python3-traitlets_4.3.1-1_all.deb ...
+A descompactar python3-traitlets (4.3.1-1) ...
+A seleccionar pacote anteriormente não seleccionado python-ptyprocess.
+A preparar para desempacotar .../10-python-ptyprocess_0.5.1-1_all.deb ...
+A descompactar python-ptyprocess (0.5.1-1) ...
+A seleccionar pacote anteriormente não seleccionado python-pexpect.
+A preparar para desempacotar .../11-python-pexpect_4.2.1-1_all.deb ...
+A descompactar python-pexpect (4.2.1-1) ...
+A seleccionar pacote anteriormente não seleccionado python3-ipython.
+A preparar para desempacotar .../12-python3-ipython_5.1.0-3_all.deb ...
+A descompactar python3-ipython (5.1.0-3) ...
+A seleccionar pacote anteriormente não seleccionado ipython3.
+A preparar para desempacotar .../13-ipython3_5.1.0-3_all.deb ...
+A descompactar ipython3 (5.1.0-3) ...
+Configurando python3-pickleshare (0.7.4-1) ...
+Configurando python3-simplegeneric (0.8.1-1) ...
+Configurando python3-wcwidth (0.1.7+dfsg1-1) ...
+Configurando python-ptyprocess (0.5.1-1) ...
+Configurando python3-ipython-genutils (0.1.0-2) ...
+A processar 'triggers' para man-db (2.7.6.1-2) ...
+Configurando python3-decorator (4.0.11-1) ...
+Configurando python3-traitlets (4.3.1-1) ...
+Configurando python3-ptyprocess (0.5.1-1) ...
+Configurando python3-pygments (2.2.0+dfsg-1) ...
+Configurando python3-prompt-toolkit (1.0.9-1) ...
+Configurando python-pexpect (4.2.1-1) ...
+Configurando python3-pexpect (4.2.1-1) ...
+Configurando python3-ipython (5.1.0-3) ...
+Configurando ipython3 (5.1.0-3) ...
+developer@developer:~/520/Aula-2$ python3 exerc2.py
+Digite quantidade de notas: 2
+Digite a nota 1: 6
+Digite a nota 2: 8
+Média:  7.0
+Aprovado
+developer@developer:~/520/Aula-2$ python3 exerc2.py
+Digite quantidade de notas: 3
+Digite a nota 1: 12
+nota inválida
+Digite a nota 2: 7
+Digite a nota 3: 8
+Média:  7.5
+Aprovado
+developer@developer:~/520/Aula-2$ git add .
+developer@developer:~/520/Aula-2$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   exerc1.py
+        new file:   exerc2.py
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   ../.vscode/settings.json
+        modified:   ../Aula-1/exerc3.py
+        modified:   ../Aula-1/exerc5.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        ../.gitignore
+
+developer@developer:~/520/Aula-2$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   exerc1.py
+        new file:   exerc2.py
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   ../.vscode/settings.json
+        modified:   ../Aula-1/exerc3.py
+        modified:   ../Aula-1/exerc5.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        ../.gitignore
+
+developer@developer:~/520/Aula-2$ git commit '10:58'
+error: pathspec '10:58' did not match any file(s) known to git.
+developer@developer:~/520/Aula-2$ git commit ('10:58')
+bash: erro de sintaxe próximo ao token inesperado `('
+developer@developer:~/520/Aula-2$ git commit ('parte 1')
+bash: erro de sintaxe próximo ao token inesperado `('
+developer@developer:~/520/Aula-2$ git commit 'parte 1'
+error: pathspec 'parte 1' did not match any file(s) known to git.
+developer@developer:~/520/Aula-2$ git commit -m 'parte 1'
+[master 5e627ed] parte 1
+ 2 files changed, 33 insertions(+)
+ create mode 100644 Aula-2/exerc1.py
+ create mode 100644 Aula-2/exerc2.py
+developer@developer:~/520/Aula-2$ cd ..
+developer@developer:~/520$ git commit -m 'parte 1'
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+Changes not staged for commit:
+        modified:   .vscode/settings.json
+        modified:   Aula-1/exerc3.py
+        modified:   Aula-1/exerc5.py
+
+Untracked files:
+        .gitignore
+
+no changes added to commit
+developer@developer:~/520$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   .vscode/settings.json
+        modified:   Aula-1/exerc3.py
+        modified:   Aula-1/exerc5.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+developer@developer:~/520$ git add .
+developer@developer:~/520$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   .gitignore
+        modified:   .vscode/settings.json
+        modified:   Aula-1/exerc3.py
+        modified:   Aula-1/exerc5.py
+
+developer@developer:~/520$ git commit -m 'parte 1'
+[master 1e953ab] parte 1
+ 4 files changed, 54 insertions(+), 3 deletions(-)
+ create mode 100644 .gitignore
+developer@developer:~/520$ python3 Aula-2/exerc3.py
+Digite quantidade de notas: d
+Digite somente numeros
+developer@developer:~/520$ python3 Aula-2/exerc3.py
+Digite quantidade de notas: 3
+Digite a nota 1: 4
+Digite a nota 2: e
+Digite somente números!
+developer@developer:~/520$ python3 Aula-2/exerc3.py
+Digite quantidade de notas: r
+Traceback (most recent call last):
+  File "Aula-2/exerc3.py", line 3, in <module>
+    qtnotas = int(input('Digite quantidade de notas: '))
+ValueError: invalid literal for int() with base 10: 'r'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "Aula-2/exerc3.py", line 5, in <module>
+    print('Digite somente numeros{}'.format(qtnotas))
+NameError: name 'qtnotas' is not defined
+developer@developer:~/520$ python3 Aula-2/exerc3.py
+Digite quantidade de notas: e
+invalid literal for int() with base 10: 'e'
+Digite somente numeros
+developer@developer:~/520$ python3 Aula-2/exerc3.py
+Digite quantidade de notas: e
+invalid literal for int() with base 10: 'e'
+Traceback (most recent call last):
+  File "Aula-2/exerc3.py", line 4, in <module>
+    qtnotas = int(input('Digite quantidade de notas: '))
+ValueError: invalid literal for int() with base 10: 'e'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "Aula-2/exerc3.py", line 7, in <module>
+    print(mensagem,qtnotas)
+NameError: name 'qtnotas' is not defined
+developer@developer:~/520$ python3 Aula-2/exerc3.py
+Digite quantidade de notas: r
+invalid literal for int() with base 10: 'r'
+Traceback (most recent call last):
+  File "Aula-2/exerc3.py", line 4, in <module>
+    qtnotas = int(input('Digite quantidade de notas: '))
+ValueError: invalid literal for int() with base 10: 'r'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "Aula-2/exerc3.py", line 7, in <module>
+    print(mensagem,str(qtnotas))
+NameError: name 'qtnotas' is not defined
+developer@developer:~/520$ python3 Aula-2/exerc3.py
+Digite quantidade de notas: e
+invalid literal for int() with base 10: 'e'
+Traceback (most recent call last):
+  File "Aula-2/exerc3.py", line 4, in <module>
+    qtnotas = int(input('Digite quantidade de notas: '))
+ValueError: invalid literal for int() with base 10: 'e'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "Aula-2/exerc3.py", line 7, in <module>
+    print(mensagem+str(qtnotas))
+NameError: name 'qtnotas' is not defined
+developer@developer:~/520$ python3 Aula-2/exerc3.py
+  File "Aula-2/exerc3.py", line 8
+    exit()
+       ^
+SyntaxError: invalid syntax
+developer@developer:~/520$ e
+bash: e: comando não encontrado
+developer@developer:~/520$ python3 Aula-2/exerc3.py
+Digite quantidade de notas: e
+invalid literal for int() with base 10: 'e'
+Digite somente numeros!
+developer@developer:~/520$ ipython
+Python 2.7.13 (default, Jan 19 2017, 14:48:08)
+Type "copyright", "credits" or "license" for more information.
+
+IPython 5.2.2 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+
+In [1]: nomes = ['daniel', 'maria']
+
+In [2]: exit()
+developer@developer:~/520$ python3 Aula-2/exerc3.py
+Digite quantidade de notas: e
+invalid literal for int() with base 10: 'e'
+Digite somente numeros!
+developer@developer:~/520$ python3 Aula-2/exerc3.py
+Digite quantidade de notas: 11,2
+invalid literal for int() with base 10: '11,2'
+Digite somente numeros!
+developer@developer:~/520$ python3 Aula-2/exerc3.py
+Digite quantidade de notas: ^CTraceback (most recent call last):
+  File "Aula-2/exerc3.py", line 4, in <module>
+    qtnotas = int(input('Digite quantidade de notas: '))
+KeyboardInterrupt
+developer@developer:~/520$ python3 Aula-2/exerc3.py
+Digite quantidade de notas: 5
+Digite a nota 1: 6
+Digite a nota 2: 6
+Digite a nota 3: 6
+Digite a nota 4: 6
+Digite a nota 5: 6
+Média:  6.0
+Recuperação
+developer@developer:~/520$ git push origin master
+Username for 'https://github.com': alexandrepiza
+Password for 'https://alexandrepiza@github.com':
+Counting objects: 13, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (13/13), 1.75 KiB | 0 bytes/s, done.
+Total 13 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/alexandrepiza/520.git
+   38c819a..1e953ab  master -> master
+developer@developer:~/520$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Aula-2/exerc3.py
+        git_command.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+developer@developer:~/520$ git add .
+developer@developer:~/520$ git push origin master
+Username for 'https://github.com': alexandrepiza
+Password for 'https://alexandrepiza@github.com':
+Everything up-to-date
+developer@developer:~/520$ python3 Aula-2/exerc4.py
+Digite quantidade de notas: e
+invalid literal for int() with base 10: 'e'
+Digite somente numeros! Tente novamente.
+developer@developer:~/520$ python3 Aula-2/exerc4.py
+Digite quantidade de notas: 5
+Digite a nota 2: 0
+Digite a nota 3: 0
+Digite a nota 4: 0
+Digite a nota 5: 0
+Digite a nota 6: 0
+Média:  0.0
+Reprovado
+developer@developer:~/520$ python3 Aula-2/exerc4.py
+Digite quantidade de notas: 3
+Digite a nota 2: ^CTraceback (most recent call last):
+  File "Aula-2/exerc4.py", line 18, in <module>
+    nota = float(input('Digite a nota {}: '.format(x+1)))
+KeyboardInterrupt
+developer@developer:~/520$ python3 Aula-2/exerc4.py
+Digite quantidade de notas: 3
+Digite a nota 1: e
+could not convert string to float: 'e'
+Digite somente numeros! Tente novamente.
+Digite a nota 1: 2
+Digite a nota 2: dsg
+could not convert string to float: 'dsg'
+Digite somente numeros! Tente novamente.
+Digite a nota 2: 6
+Digite a nota 3: bb
+could not convert string to float: 'bb'
+Digite somente numeros! Tente novamente.
+Digite a nota 3: 9
+Média:  5.666666666666667
+Recuperação
+developer@developer:~/520$ python3 Aula-2/exerc4.py
+Traceback (most recent call last):
+  File "Aula-2/exerc4.py", line 4, in <module>
+    while er == null:
+NameError: name 'er' is not defined
+developer@developer:~/520$ python3 Aula-2/exerc4.py
+  File "Aula-2/exerc4.py", line 4
+    while er = null:
+             ^
+SyntaxError: invalid syntax
+developer@developer:~/520$ python3 Aula-2/exerc4.py
+  File "Aula-2/exerc4.py", line 5
+    try:
+    ^
+IndentationError: unexpected indent
+developer@developer:~/520$ python3 Aula-2/exerc5.py
+Digite posição do convidado: d
+Apenas números.
+Traceback (most recent call last):
+  File "Aula-2/exerc5.py", line 11, in <module>
+    print(convidados[num])
+NameError: name 'num' is not defined
+developer@developer:~/520$ python3 Aula-2/exerc5.py
+Digite posição do convidado: d
+Traceback (most recent call last):
+  File "Aula-2/exerc5.py", line 5, in <module>
+    num=int(input('Digite posição do convidado: '))
+ValueError: invalid literal for int() with base 10: 'd'
+developer@developer:~/520$ python3 Aula-2/exerc5.py
+Digite posição do convidado: f
+Value! Apenas números.
+Traceback (most recent call last):
+  File "Aula-2/exerc5.py", line 13, in <module>
+    print(convidados[num])
+NameError: name 'num' is not defined
+developer@developer:~/520$ python3 Aula-2/exerc5.py
+Digite posição do convidado: f
+Value! Apenas números.
+developer@developer:~/520$ python3 Aula-2/exerc5.py
+Digite posição do convidado: 3
+Traceback (most recent call last):
+  File "Aula-2/exerc5.py", line 16, in <module>
+    print(convidados[num])
+IndexError: list index out of range
+developer@developer:~/520$ python3 Aula-2/exerc5.py
+Digite posição do convidado: r
+Value! Apenas números.
+developer@developer:~/520$ python3 Aula-2/exerc5.py
+Digite posição do convidado: 5
+Traceback (most recent call last):
+  File "Aula-2/exerc5.py", line 16, in <module>
+    print(convidados[num])
+IndexError: list index out of range
+developer@developer:~/520$ python3 Aula-2/exerc5.py
+Digite posição do convidado: 4
+Index! Posição na lista inexistente.
+developer@developer:~/520$ python3 Aula-2/exerc5.py
+Digite posição do convidado: 2
+joao
+developer@developer:~/520$
