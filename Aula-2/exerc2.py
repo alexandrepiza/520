@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 qtnotas = int(input('Digite quantidade de notas: '))
 
 total = float(0)
