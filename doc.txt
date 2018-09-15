@@ -33,3 +33,14 @@ systemctl disable
 ss -ntlp
 echo \#\!$(which python3) > arquivo.py
 chmod +x $(ls)
+
+Instalar o pip
+apt-get install python3-pip
+depois pode instalar o bpython
+pip3 install bpython
+Instalar o virtualenv para resolver problemas de versão
+pip3 install virtualenv
+pip3 freeze tras todos os modulos instalados
+
+
+/home/developer/.local/bin
