@@ -44,3 +44,7 @@ pip3 freeze tras todos os modulos instalados
 
 
 /home/developer/.local/bin
+
+apt-cache search mongo # verifica se o pacote está instalados
+
+
