@@ -1,4 +1,4 @@
-stdin, stdout, stderr = client.exec_command('Is -la')
+stdin, stdout, stderr = client.exec_command('ls -la')
 if stdout.channel.recv_exit_status() == 0:
     print(stdout.read().decode('utf-8'))
 else:

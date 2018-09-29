@@ -1,0 +1,579 @@
+developer@developer:~/520$ pwd
+/home/developer/520
+developer@developer:~/520$ cd Aula-5
+developer@developer:~/520/Aula-5$ cd
+developer@developer:~$ ls
+520  Área de trabalho  Documentos  Downloads  eclipse  Imagens  Modelos  Música  Público  Vídeos  workspace
+developer@developer:~$ cd 520
+developer@developer:~/520$ cd Aula-5
+developer@developer:~/520/Aula-5$ ls
+feature  tdd2.py  tdd.py
+developer@developer:~/520/Aula-5$ cd feature/
+developer@developer:~/520/Aula-5/feature$ ls
+funcionalidade.feature  steps
+developer@developer:~/520/Aula-5/feature$ cd steps/
+developer@developer:~/520/Aula-5/feature/steps$ ls
+steps.py
+developer@developer:~/520/Aula-5/feature/steps$ python3 steps.py
+  File "steps.py", line 8
+    @step('somar "{numl}" com "{num2}'")
+                                       ^
+SyntaxError: EOL while scanning string literal
+developer@developer:~/520/Aula-5/feature/steps$ python3 steps.py
+  File "steps.py", line 9
+    def test soma(context, numl, num2):
+                ^
+SyntaxError: invalid syntax
+developer@developer:~/520/Aula-5/feature/steps$ python3 steps.py
+developer@developer:~/520/Aula-5/feature/steps$ cd ..
+developer@developer:~/520/Aula-5/feature$ ls
+funcionalidade.feature  steps
+developer@developer:~/520/Aula-5/feature$ behave funcionalidade.feature
+Funcionalidade: Soma # funcionalidade.feature:3
+
+  Cenário: adicao basica           # funcionalidade.feature:4
+    Quando somar "2" com "2"       # steps/steps.py:8 0.000s
+    Então o resultado deve ser "4" # steps/steps.py:12 0.000s
+
+1 feature passed, 0 failed, 0 skipped
+1 scenario passed, 0 failed, 0 skipped
+2 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m0.001s
+developer@developer:~/520/Aula-5/feature$ cd ..
+developer@developer:~/520/Aula-5$ ls
+feature  tdd2.py  tdd.py
+developer@developer:~/520/Aula-5$ python3 tdd.py
+F
+======================================================================
+FAIL: test_par (__main__.Testes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tdd.py", line 23, in test_par
+    self.assertEqual(validar_par(4), True)
+AssertionError: False != True
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+FAILED (failures=1)
+developer@developer:~/520/Aula-5$ python3 tdd.py
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+OK
+developer@developer:~/520/Aula-5$ ss -ntlp
+State      Recv-Q Send-Q                     Local Address:Port                                    Peer Address:Port
+LISTEN     0      128                                    *:22                                                 *:*
+LISTEN     0      128                            127.0.0.1:5432                                               *:*
+LISTEN     0      128                            127.0.0.1:27017                                              *:*
+LISTEN     0      80                             127.0.0.1:3306                                               *:*
+LISTEN     0      128                                   :::80                                                :::*
+LISTEN     0      128                                   :::22                                                :::*
+LISTEN     0      128                                  ::1:5432                                              :::*
+developer@developer:~/520/Aula-5$ systemctl start mongodb
+developer@developer:~/520/Aula-5$ ss -ntlp
+State      Recv-Q Send-Q                     Local Address:Port                                    Peer Address:Port
+LISTEN     0      128                                    *:22                                                 *:*
+LISTEN     0      128                            127.0.0.1:5432                                               *:*
+LISTEN     0      128                            127.0.0.1:27017                                              *:*
+LISTEN     0      80                             127.0.0.1:3306                                               *:*
+LISTEN     0      128                                   :::80                                                :::*
+LISTEN     0      128                                   :::22                                                :::*
+LISTEN     0      128                                  ::1:5432                                              :::*
+developer@developer:~/520/Aula-5$ cd Projeto/
+developer@developer:~/520/Aula-5/Projeto$ ls
+app.py  Modulos
+developer@developer:~/520/Aula-5/Projeto$ ls
+app.py  Modulos
+developer@developer:~/520/Aula-5/Projeto$ python3 app.py
+Traceback (most recent call last):
+  File "app.py", line 1, in <module>
+    import modulos.banco as banco # está apelidando banco para o modulos.banco
+ImportError: No module named 'modulos'
+developer@developer:~/520/Aula-5/Projeto$ python3 app.py
+Traceback (most recent call last):
+  File "app.py", line 3, in <module>
+    import modulos.banco as banco
+ImportError: No module named 'modulos'
+developer@developer:~/520/Aula-5/Projeto$ python3 app.py
+Nickname: Alexandre
+Olá
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/threading.py", line 914, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.5/threading.py", line 862, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/developer/520/Aula-5/Projeto/Modulos/banco.py", line 28, in select
+    date[0]['hora'], date[0]['nome'], date[0]['mensagem']))
+ValueError: expected '}' before end of string
+
+^[[A^[[B
+
+
+^[[A^CTraceback (most recent call last):
+  File "app.py", line 17, in <module>
+    mens = input()
+KeyboardInterrupt
+developer@developer:~/520/Aula-5/Projeto$ cd Modulos/
+developer@developer:~/520/Aula-5/Projeto/Modulos$ ls
+banco.py  __pycache__
+developer@developer:~/520/Aula-5/Projeto/Modulos$ cd ..
+developer@developer:~/520/Aula-5/Projeto$ ls
+app.py  Modulos
+developer@developer:~/520/Aula-5/Projeto$ python3 /Modulos//banco.py
+python3: can't open file '/Modulos//banco.py': [Errno 2] No such file or directory
+developer@developer:~/520/Aula-5/Projeto$ python3 /Modulos/banco.py
+python3: can't open file '/Modulos/banco.py': [Errno 2] No such file or directory
+developer@developer:~/520/Aula-5/Projeto$ python3 ./Modulos/banco.py
+developer@developer:~/520/Aula-5/Projeto$ python3 app.py
+Nickname: Alexandre
+Oi
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/threading.py", line 914, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.5/threading.py", line 862, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/developer/520/Aula-5/Projeto/Modulos/banco.py", line 28, in select
+    date[0]['hora'], date[0]['nome'], date[0]['mensagem']))
+ValueError: expected '}' before end of string
+
+dd
+df
+asdf
+
+asdf
+fdas
+
+^CTraceback (most recent call last):
+  File "app.py", line 17, in <module>
+    mens = input()
+KeyboardInterrupt
+developer@developer:~/520/Aula-5/Projeto$ python3 app.py
+Nickname: jj
+]jk
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/threading.py", line 914, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.5/threading.py", line 862, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/developer/520/Aula-5/Projeto/Modulos/banco.py", line 28, in select
+    date[0]['hora'], date[0]['nome'], date[0]['mensagem']))
+ValueError: expected '}' before end of string
+
+
+^CTraceback (most recent call last):
+  File "app.py", line 17, in <module>
+    mens = input()
+KeyboardInterrupt
+developer@developer:~/520/Aula-5/Projeto$ python3 app.py
+Nickname: hh
+gh
+[29-09-2018 11:26:24] hh : gh
+
+^CTraceback (most recent call last):
+  File "app.py", line 17, in <module>
+    mens = input()
+KeyboardInterrupt
+
+^CException ignored in: <module 'threading' from '/usr/lib/python3.5/threading.py'>
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/threading.py", line 1288, in _shutdown
+    t.join()
+  File "/usr/lib/python3.5/threading.py", line 1054, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.5/threading.py", line 1070, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+developer@developer:~/520/Aula-5/Projeto$ sudo pip3 install paramiko
+Collecting paramiko
+  Downloading https://files.pythonhosted.org/packages/cf/ae/94e70d49044ccc234bfdba20114fa947d7ba6eb68a2e452d89b920e62227/paramiko-2.4.2-py2.py3-none-any.whl (193kB)
+    100% |████████████████████████████████| 194kB 725kB/s
+Collecting cryptography>=1.5 (from paramiko)
+  Downloading https://files.pythonhosted.org/packages/59/32/92cade62c645756a83598edf56289e9b19aae5370642a7ce690cd06bc72f/cryptography-2.3.1-cp34-abi3-manylinux1_x86_64.whl (2.1MB)
+    100% |████████████████████████████████| 2.1MB 225kB/s
+Collecting bcrypt>=3.1.3 (from paramiko)
+  Downloading https://files.pythonhosted.org/packages/72/8d/57da727cbb4ddf0295b0665a93bd8f46fbbd2a48b76cbb0896ca7d27301f/bcrypt-3.1.4-cp35-cp35m-manylinux1_x86_64.whl (54kB)
+    100% |████████████████████████████████| 61kB 1.3MB/s
+Requirement already satisfied: pyasn1>=0.1.7 in /usr/lib/python3/dist-packages (from paramiko)
+Collecting pynacl>=1.0.1 (from paramiko)
+  Downloading https://files.pythonhosted.org/packages/27/15/2cd0a203f318c2240b42cd9dd13c931ddd61067809fee3479f44f086103e/PyNaCl-1.3.0-cp34-abi3-manylinux1_x86_64.whl (759kB)
+    100% |████████████████████████████████| 768kB 581kB/s
+Collecting asn1crypto>=0.21.0 (from cryptography>=1.5->paramiko)
+  Downloading https://files.pythonhosted.org/packages/ea/cd/35485615f45f30a510576f1a56d1e0a7ad7bd8ab5ed7cdc600ef7cd06222/asn1crypto-0.24.0-py2.py3-none-any.whl (101kB)
+    100% |████████████████████████████████| 102kB 1.1MB/s
+Requirement already satisfied: idna>=2.1 in /usr/lib/python3/dist-packages (from cryptography>=1.5->paramiko)
+Collecting cffi!=1.11.3,>=1.7 (from cryptography>=1.5->paramiko)
+  Downloading https://files.pythonhosted.org/packages/59/cc/0e1635b4951021ef35f5c92b32c865ae605fac2a19d724fb6ff99d745c81/cffi-1.11.5-cp35-cp35m-manylinux1_x86_64.whl (420kB)
+    100% |████████████████████████████████| 430kB 779kB/s
+Requirement already satisfied: six>=1.4.1 in /usr/local/lib/python3.5/dist-packages (from cryptography>=1.5->paramiko)
+Collecting pycparser (from cffi!=1.11.3,>=1.7->cryptography>=1.5->paramiko)
+  Downloading https://files.pythonhosted.org/packages/68/9e/49196946aee219aead1290e00d1e7fdeab8567783e83e1b9ab5585e6206a/pycparser-2.19.tar.gz (158kB)
+    100% |████████████████████████████████| 163kB 1.0MB/s
+Building wheels for collected packages: pycparser
+  Running setup.py bdist_wheel for pycparser ... error
+  Complete output from command /usr/bin/python3 -u -c "import setuptools, tokenize;__file__='/tmp/pip-build-1isfuwg1/pycparser/setup.py';f=getattr(tokenize, 'open', open)(__file__);code=f.read().replace('\r\n', '\n');f.close();exec(compile(code, __file__, 'exec'))" bdist_wheel -d /tmp/tmptoh7j27spip-wheel- --python-tag cp35:
+  usage: -c [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+     or: -c --help [cmd1 cmd2 ...]
+     or: -c --help-commands
+     or: -c cmd --help
+
+  error: invalid command 'bdist_wheel'
+
+  ----------------------------------------
+  Failed building wheel for pycparser
+  Running setup.py clean for pycparser
+Failed to build pycparser
+Installing collected packages: asn1crypto, pycparser, cffi, cryptography, bcrypt, pynacl, paramiko
+  Running setup.py install for pycparser ... done
+Successfully installed asn1crypto-0.24.0 bcrypt-3.1.4 cffi-1.11.5 cryptography-2.3.1 paramiko-2.4.2 pycparser-2.19 pynacl-1.3.0
+developer@developer:~/520/Aula-5/Projeto$ sudo pip3 install jupyter
+Collecting jupyter
+  Downloading https://files.pythonhosted.org/packages/83/df/0f5dd132200728a86190397e1ea87cd76244e42d39ec5e88efd25b2abd7e/jupyter-1.0.0-py2.py3-none-any.whl
+Collecting ipywidgets (from jupyter)
+  Downloading https://files.pythonhosted.org/packages/30/9a/a008c7b1183fac9e52066d80a379b3c64eab535bd9d86cdc29a0b766fd82/ipywidgets-7.4.2-py2.py3-none-any.whl (111kB)
+    100% |████████████████████████████████| 112kB 855kB/s
+Collecting notebook (from jupyter)
+  Downloading https://files.pythonhosted.org/packages/44/16/9f108b675828c4117cfe72d8d0f97094163c40584e40c46ec48a1e862693/notebook-5.7.0-py2.py3-none-any.whl (9.0MB)
+    100% |████████████████████████████████| 9.0MB 63kB/s
+Collecting qtconsole (from jupyter)
+  Downloading https://files.pythonhosted.org/packages/ff/1f/b340d52dee46fbbe8a097dce76d1197258bb599692159d94c80921fef9eb/qtconsole-4.4.1-py2.py3-none-any.whl (112kB)
+    100% |████████████████████████████████| 112kB 1.2MB/s
+Collecting ipykernel (from jupyter)
+  Downloading https://files.pythonhosted.org/packages/ec/19/b18f4c48ea6043921fe1b689ff0a912e066927b25bb0c17a58f7274f4880/ipykernel-5.0.0-py3-none-any.whl (113kB)
+    100% |████████████████████████████████| 122kB 1.3MB/s
+Collecting nbconvert (from jupyter)
+  Downloading https://files.pythonhosted.org/packages/b5/bb/94c493051d60e5b9c0f7f9a368b324201818c1b1c4cae85d1e49a41846c7/nbconvert-5.4.0-py2.py3-none-any.whl (405kB)
+    100% |████████████████████████████████| 409kB 788kB/s
+Collecting jupyter-console (from jupyter)
+  Downloading https://files.pythonhosted.org/packages/77/82/6469cd7fccf7958cbe5dce2e623f1e3c5e27f1bb1ad36d90519bc2d5d370/jupyter_console-5.2.0-py2.py3-none-any.whl
+Requirement already satisfied: ipython>=4.0.0; python_version >= "3.3" in /usr/lib/python3/dist-packages (from ipywidgets->jupyter)
+Requirement already satisfied: traitlets>=4.3.1 in /usr/lib/python3/dist-packages (from ipywidgets->jupyter)
+Collecting nbformat>=4.2.0 (from ipywidgets->jupyter)
+  Downloading https://files.pythonhosted.org/packages/da/27/9a654d2b6cc1eaa517d1c5a4405166c7f6d72f04f6e7eea41855fe808a46/nbformat-4.4.0-py2.py3-none-any.whl (155kB)
+    100% |████████████████████████████████| 163kB 1.0MB/s
+Collecting widgetsnbextension~=3.4.0 (from ipywidgets->jupyter)
+  Downloading https://files.pythonhosted.org/packages/8a/81/35789a3952afb48238289171728072d26d6e76649ddc8b3588657a2d78c1/widgetsnbextension-3.4.2-py2.py3-none-any.whl (2.2MB)
+    100% |████████████████████████████████| 2.2MB 269kB/s
+Collecting jupyter-core>=4.4.0 (from notebook->jupyter)
+  Downloading https://files.pythonhosted.org/packages/1d/44/065d2d7bae7bebc06f1dd70d23c36da8c50c0f08b4236716743d706762a8/jupyter_core-4.4.0-py2.py3-none-any.whl (126kB)
+    100% |████████████████████████████████| 133kB 1.1MB/s
+Collecting jupyter-client>=5.2.0 (from notebook->jupyter)
+  Downloading https://files.pythonhosted.org/packages/94/dd/fe6c4d683b09eb05342bd2816b7779663f71762b4fa9c2d5203d35d17354/jupyter_client-5.2.3-py2.py3-none-any.whl (89kB)
+    100% |████████████████████████████████| 92kB 1.3MB/s
+Requirement already satisfied: ipython-genutils in /usr/lib/python3/dist-packages (from notebook->jupyter)
+Collecting jinja2 (from notebook->jupyter)
+  Cache entry deserialization failed, entry ignored
+  Cache entry deserialization failed, entry ignored
+  Downloading https://files.pythonhosted.org/packages/7f/ff/ae64bacdfc95f27a016a7bed8e8686763ba4d277a78ca76f32659220a731/Jinja2-2.10-py2.py3-none-any.whl (126kB)
+    100% |████████████████████████████████| 133kB 1.1MB/s
+Collecting tornado>=4 (from notebook->jupyter)
+  Downloading https://files.pythonhosted.org/packages/e6/78/6e7b5af12c12bdf38ca9bfe863fcaf53dc10430a312d0324e76c1e5ca426/tornado-5.1.1.tar.gz (516kB)
+    100% |████████████████████████████████| 522kB 708kB/s
+Collecting Send2Trash (from notebook->jupyter)
+  Downloading https://files.pythonhosted.org/packages/49/46/c3dc27481d1cc57b9385aff41c474ceb7714f7935b1247194adae45db714/Send2Trash-1.5.0-py3-none-any.whl
+Collecting pyzmq>=17 (from notebook->jupyter)
+  Downloading https://files.pythonhosted.org/packages/9a/f9/6d7d3d1c83159997e2e7bc74d11e84a83aa1e7f85e6f028341414e7c2141/pyzmq-17.1.2-cp35-cp35m-manylinux1_x86_64.whl (995kB)
+    100% |████████████████████████████████| 1.0MB 458kB/s
+Collecting terminado>=0.8.1 (from notebook->jupyter)
+  Downloading https://files.pythonhosted.org/packages/2e/20/a26211a24425923d46e1213b376a6ee60dc30bcdf1b0c345e2c3769deb1c/terminado-0.8.1-py2.py3-none-any.whl
+Collecting prometheus-client (from notebook->jupyter)
+  Downloading https://files.pythonhosted.org/packages/a1/b1/08de091b392fec31da9bd3f5edd9214ec1c6931dd81641610ac20f3ff934/prometheus_client-0.3.1.tar.gz
+Requirement already satisfied: pygments in /usr/lib/python3/dist-packages (from qtconsole->jupyter)
+Collecting bleach (from nbconvert->jupyter)
+  Downloading https://files.pythonhosted.org/packages/94/aa/0f7ce53f8688bb9f80c0cffacc3964ddfe08321c509c0bfe5062848951f9/bleach-2.1.4-py2.py3-none-any.whl
+Collecting mistune>=0.8.1 (from nbconvert->jupyter)
+  Downloading https://files.pythonhosted.org/packages/c8/8c/87f4d359438ba0321a2ae91936030110bfcc62fef752656321a72b8c1af9/mistune-0.8.3-py2.py3-none-any.whl
+Collecting pandocfilters>=1.4.1 (from nbconvert->jupyter)
+  Downloading https://files.pythonhosted.org/packages/4c/ea/236e2584af67bb6df960832731a6e5325fd4441de001767da328c33368ce/pandocfilters-1.4.2.tar.gz
+Collecting entrypoints>=0.2.2 (from nbconvert->jupyter)
+  Downloading https://files.pythonhosted.org/packages/cc/8b/4eefa9b47f1910b3d2081da67726b066e379b04ca897acfe9f92bac56147/entrypoints-0.2.3-py2.py3-none-any.whl
+Collecting defusedxml (from nbconvert->jupyter)
+  Downloading https://files.pythonhosted.org/packages/87/1c/17f3e3935a913dfe2a5ca85fa5ccbef366bfd82eb318b1f75dadbf0affca/defusedxml-0.5.0-py2.py3-none-any.whl
+Collecting testpath (from nbconvert->jupyter)
+  Downloading https://files.pythonhosted.org/packages/62/19/bb5986dabec5a49c9172dfe2781e39b0f3b35040221c18f6b413b052448f/testpath-0.4.1-py2.py3-none-any.whl (163kB)
+    100% |████████████████████████████████| 163kB 966kB/s
+Requirement already satisfied: prompt-toolkit<2.0.0,>=1.0.0 in /usr/lib/python3/dist-packages (from jupyter-console->jupyter)
+Requirement already satisfied: pexpect in /usr/lib/python3/dist-packages (from ipython>=4.0.0; python_version >= "3.3"->ipywidgets->jupyter)
+Collecting jsonschema!=2.5.0,>=2.4 (from nbformat>=4.2.0->ipywidgets->jupyter)
+  Downloading https://files.pythonhosted.org/packages/77/de/47e35a97b2b05c2fadbec67d44cfcdcd09b8086951b331d82de90d2912da/jsonschema-2.6.0-py2.py3-none-any.whl
+Requirement already satisfied: python-dateutil>=2.1 in /usr/local/lib/python3.5/dist-packages (from jupyter-client>=5.2.0->notebook->jupyter)
+Collecting MarkupSafe>=0.23 (from jinja2->notebook->jupyter)
+  Cache entry deserialization failed, entry ignored
+Requirement already satisfied: ptyprocess; os_name != "nt" in /usr/lib/python3/dist-packages (from terminado>=0.8.1->notebook->jupyter)
+Collecting html5lib!=1.0b1,!=1.0b2,!=1.0b3,!=1.0b4,!=1.0b5,!=1.0b6,!=1.0b7,!=1.0b8,>=0.99999999pre (from bleach->nbconvert->jupyter)
+  Downloading https://files.pythonhosted.org/packages/a5/62/bbd2be0e7943ec8504b517e62bab011b4946e1258842bc159e5dfde15b96/html5lib-1.0.1-py2.py3-none-any.whl (117kB)
+    100% |████████████████████████████████| 122kB 1.2MB/s
+Requirement already satisfied: six in /usr/local/lib/python3.5/dist-packages (from bleach->nbconvert->jupyter)
+Collecting webencodings (from html5lib!=1.0b1,!=1.0b2,!=1.0b3,!=1.0b4,!=1.0b5,!=1.0b6,!=1.0b7,!=1.0b8,>=0.99999999pre->bleach->nbconvert->jupyter)
+  Downloading https://files.pythonhosted.org/packages/f4/24/2a3e3df732393fed8b3ebf2ec078f05546de641fe1b667ee316ec1dcf3b7/webencodings-0.5.1-py2.py3-none-any.whl
+Building wheels for collected packages: tornado, prometheus-client, pandocfilters
+  Running setup.py bdist_wheel for tornado ... error
+  Complete output from command /usr/bin/python3 -u -c "import setuptools, tokenize;__file__='/tmp/pip-build-wfe2qcmd/tornado/setup.py';f=getattr(tokenize, 'open', open)(__file__);code=f.read().replace('\r\n', '\n');f.close();exec(compile(code, __file__, 'exec'))"bdist_wheel -d /tmp/tmp5y82qxalpip-wheel- --python-tag cp35:
+  usage: -c [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+     or: -c --help [cmd1 cmd2 ...]
+     or: -c --help-commands
+     or: -c cmd --help
+
+  error: invalid command 'bdist_wheel'
+
+  ----------------------------------------
+  Failed building wheel for tornado
+  Running setup.py clean for tornado
+  Running setup.py bdist_wheel for prometheus-client ... error
+  Complete output from command /usr/bin/python3 -u -c "import setuptools, tokenize;__file__='/tmp/pip-build-wfe2qcmd/prometheus-client/setup.py';f=getattr(tokenize, 'open', open)(__file__);code=f.read().replace('\r\n', '\n');f.close();exec(compile(code, __file__,'exec'))" bdist_wheel -d /tmp/tmpwrjjc02hpip-wheel- --python-tag cp35:
+  usage: -c [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+     or: -c --help [cmd1 cmd2 ...]
+     or: -c --help-commands
+     or: -c cmd --help
+
+  error: invalid command 'bdist_wheel'
+
+  ----------------------------------------
+  Failed building wheel for prometheus-client
+  Running setup.py clean for prometheus-client
+  Running setup.py bdist_wheel for pandocfilters ... error
+  Complete output from command /usr/bin/python3 -u -c "import setuptools, tokenize;__file__='/tmp/pip-build-wfe2qcmd/pandocfilters/setup.py';f=getattr(tokenize, 'open', open)(__file__);code=f.read().replace('\r\n', '\n');f.close();exec(compile(code, __file__, 'exec'))" bdist_wheel -d /tmp/tmpxyqov0inpip-wheel- --python-tag cp35:
+  usage: -c [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+     or: -c --help [cmd1 cmd2 ...]
+     or: -c --help-commands
+     or: -c cmd --help
+
+  error: invalid command 'bdist_wheel'
+
+  ----------------------------------------
+  Failed building wheel for pandocfilters
+  Running setup.py clean for pandocfilters
+Failed to build tornado prometheus-client pandocfilters
+Installing collected packages: pyzmq, tornado, jupyter-core, jupyter-client, ipykernel, jsonschema, nbformat, MarkupSafe, jinja2, Send2Trash, webencodings, html5lib, bleach, mistune, pandocfilters, entrypoints, defusedxml, testpath, nbconvert, terminado, prometheus-client, notebook, widgetsnbextension, ipywidgets, qtconsole, jupyter-console, jupyter
+  Running setup.py install for tornado ... done
+  Running setup.py install for pandocfilters ... done
+  Running setup.py install for prometheus-client ... done
+Successfully installed MarkupSafe-1.0 Send2Trash-1.5.0 bleach-2.1.4 defusedxml-0.5.0 entrypoints-0.2.3 html5lib-1.0.1 ipykernel-5.0.0 ipywidgets-7.4.2 jinja2-2.10 jsonschema-2.6.0 jupyter-1.0.0 jupyter-client-5.2.3 jupyter-console-5.2.0 jupyter-core-4.4.0 mistune-0.8.3 nbconvert-5.4.0 nbformat-4.4.0 notebook-5.7.0 pandocfilters-1.4.2 prometheus-client-0.3.1 pyzmq-17.1.2 qtconsole-4.4.1 terminado-0.8.1 testpath-0.4.1 tornado-5.1.1 webencodings-0.5.1 widgetsnbextension-3.4.2
+developer@developer:~/520/Aula-5/Projeto$ sudo pip install Django==2.1.1
+Collecting Django==2.1.1
+  Could not find a version that satisfies the requirement Django==2.1.1 (from versions: 1.1.3, 1.1.4, 1.2, 1.2.1, 1.2.2, 1.2.3, 1.2.4, 1.2.5, 1.2.6, 1.2.7, 1.3, 1.3.1, 1.3.2, 1.3.3, 1.3.4, 1.3.5, 1.3.6, 1.3.7, 1.4, 1.4.1, 1.4.2, 1.4.3, 1.4.4, 1.4.5, 1.4.6, 1.4.7,1.4.8, 1.4.9, 1.4.10, 1.4.11, 1.4.12, 1.4.13, 1.4.14, 1.4.15, 1.4.16, 1.4.17, 1.4.18, 1.4.19, 1.4.20, 1.4.21, 1.4.22, 1.5, 1.5.1, 1.5.2, 1.5.3, 1.5.4, 1.5.5, 1.5.6, 1.5.7, 1.5.8, 1.5.9, 1.5.10, 1.5.11, 1.5.12, 1.6, 1.6.1, 1.6.2, 1.6.3, 1.6.4, 1.6.5, 1.6.6, 1.6.7,1.6.8, 1.6.9, 1.6.10, 1.6.11, 1.7, 1.7.1, 1.7.2, 1.7.3, 1.7.4, 1.7.5, 1.7.6, 1.7.7, 1.7.8, 1.7.9, 1.7.10, 1.7.11, 1.8a1, 1.8b1, 1.8b2, 1.8rc1, 1.8, 1.8.1, 1.8.2, 1.8.3, 1.8.4, 1.8.5, 1.8.6, 1.8.7, 1.8.8, 1.8.9, 1.8.10, 1.8.11, 1.8.12, 1.8.13, 1.8.14, 1.8.15, 1.8.16, 1.8.17, 1.8.18, 1.8.19, 1.9a1, 1.9b1, 1.9rc1, 1.9rc2, 1.9, 1.9.1, 1.9.2, 1.9.3, 1.9.4, 1.9.5, 1.9.6, 1.9.7, 1.9.8, 1.9.9, 1.9.10, 1.9.11, 1.9.12, 1.9.13, 1.10a1, 1.10b1, 1.10rc1, 1.10, 1.10.1, 1.10.2, 1.10.3, 1.10.4, 1.10.5, 1.10.6, 1.10.7, 1.10.8, 1.11a1, 1.11b1, 1.11rc1, 1.11, 1.11.1, 1.11.2, 1.11.3, 1.11.4, 1.11.5, 1.11.6, 1.11.7, 1.11.8, 1.11.9, 1.11.10, 1.11.11, 1.11.12, 1.11.13, 1.11.14, 1.11.15)
+No matching distribution found for Django==2.1.1
+developer@developer:~/520/Aula-5/Projeto$ sudo pip3 install Django==2.1.1
+Collecting Django==2.1.1
+  Downloading https://files.pythonhosted.org/packages/ca/7e/fc068d164b32552ae3a8f8d5d0280c083f2e8d553e71ecacc21927564561/Django-2.1.1-py3-none-any.whl (7.3MB)
+    100% |████████████████████████████████| 7.3MB 81kB/s
+Collecting pytz (from Django==2.1.1)
+  Downloading https://files.pythonhosted.org/packages/30/4e/27c34b62430286c6d59177a0842ed90dc789ce5d1ed740887653b898779a/pytz-2018.5-py2.py3-none-any.whl (510kB)
+    100% |████████████████████████████████| 512kB 509kB/s
+Installing collected packages: pytz, Django
+Successfully installed Django-2.1.1 pytz-2018.5
+developer@developer:~/520/Aula-5/Projeto$ python -m d
+dbhash           debconf          deluge           dis              doctest          dummy_thread
+dbm              decimal          difflib          distutils        dsextras         dummy_threading
+dbus             decorator        dircache         docopt           dumbdbm
+developer@developer:~/520/Aula-5/Projeto$ python -m d
+dbhash           debconf          deluge           dis              doctest          dummy_thread
+dbm              decimal          difflib          distutils        dsextras         dummy_threading
+dbus             decorator        dircache         docopt           dumbdbm
+developer@developer:~/520/Aula-5/Projeto$ python -m d
+dbhash           debconf          deluge           dis              doctest          dummy_thread
+dbm              decimal          difflib          distutils        dsextras         dummy_threading
+dbus             decorator        dircache         docopt           dumbdbm
+developer@developer:~/520/Aula-5/Projeto$ python -m django --2.1.1
+/usr/bin/python: No module named django
+developer@developer:~/520/Aula-5/Projeto$ python3 -m django --2.1.1
+No Django settings specified.
+Unknown command: '--2.1.1'
+Type 'python -m django help' for usage.
+developer@developer:~/520/Aula-5/Projeto$ python3 -m django
+
+Type 'python -m django help <subcommand>' for help on a specific subcommand.
+
+Available subcommands:
+
+[django]
+    check
+    compilemessages
+    createcachetable
+    dbshell
+    diffsettings
+    dumpdata
+    flush
+    inspectdb
+    loaddata
+    makemessages
+    makemigrations
+    migrate
+    runserver
+    sendtestemail
+    shell
+    showmigrations
+    sqlflush
+    sqlmigrate
+    sqlsequencereset
+    squashmigrations
+    startapp
+    startproject
+    test
+    testserver
+Note that only Django core commands are listed as settings are not properly configured (error: Requested setting INSTALLED_APPS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.).
+developer@developer:~/520/Aula-5/Projeto$ dj
+django-admin     django-admin.py  djpeg
+developer@developer:~/520/Aula-5/Projeto$ dj
+django-admin     django-admin.py  djpeg
+developer@developer:~/520/Aula-5/Projeto$ django-admin
+
+Type 'django-admin help <subcommand>' for help on a specific subcommand.
+
+Available subcommands:
+
+[django]
+    check
+    compilemessages
+    createcachetable
+    dbshell
+    diffsettings
+    dumpdata
+    flush
+    inspectdb
+    loaddata
+    makemessages
+    makemigrations
+    migrate
+    runserver
+    sendtestemail
+    shell
+    showmigrations
+    sqlflush
+    sqlmigrate
+    sqlsequencereset
+    squashmigrations
+    startapp
+    startproject
+    test
+    testserver
+Note that only Django core commands are listed as settings are not properly configured (error: Requested setting INSTALLED_APPS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.).
+developer@developer:~/520/Aula-5/Projeto$ django-admin.py
+
+Type 'django-admin.py help <subcommand>' for help on a specific subcommand.
+
+Available subcommands:
+
+[django]
+    check
+    compilemessages
+    createcachetable
+    dbshell
+    diffsettings
+    dumpdata
+    flush
+    inspectdb
+    loaddata
+    makemessages
+    makemigrations
+    migrate
+    runserver
+    sendtestemail
+    shell
+    showmigrations
+    sqlflush
+    sqlmigrate
+    sqlsequencereset
+    squashmigrations
+    startapp
+    startproject
+    test
+    testserver
+Note that only Django core commands are listed as settings are not properly configured (error: Requested setting INSTALLED_APPS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.).
+developer@developer:~/520/Aula-5/Projeto$ cd
+developer@developer:~$ cd 520
+developer@developer:~/520$ ls
+Aula-1  Aula-2  Aula-3  Aula-4  Aula-5  doc.txt  Flask  git_command.txt  guia_500_comandos_Linux.pdf  tmp  venv
+developer@developer:~/520$ git  add .
+error: insufficient permission for adding an object to repository database .git/objects
+error: Aula-5/Projeto/Modulos/banco.py: failed to insert into database
+error: unable to index file Aula-5/Projeto/Modulos/banco.py
+fatal: adding files failed
+developer@developer:~/520$ sudo git  add .
+developer@developer:~/520$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   Aula-5/Projeto/Modulos/__pycache__/banco.cpython-35.pyc
+        new file:   Aula-5/Projeto/Modulos/banco.py
+        new file:   Aula-5/Projeto/app.py
+        new file:   Aula-5/feature/funcionalidade.feature
+        new file:   Aula-5/feature/steps/steps.py
+        new file:   Aula-5/tdd.py
+        new file:   Aula-5/tdd2.py
+        new file:   tmp/banco1.py
+        new file:   tmp/banco2.py
+        new file:   tmp/exerc7.py
+        new file:   tmp/exerc8.py
+
+developer@developer:~/520$ git commit -m 'Aula-5  almoço'
+error: insufficient permission for adding an object to repository database .git/objects
+error: insufficient permission for adding an object to repository database .git/objects
+error: Error building trees
+developer@developer:~/520$ sudo git commit -m 'Aula-5  almoço'
+[master 5b9cf78] Aula-5  almoço
+ 11 files changed, 158 insertions(+)
+ create mode 100644 Aula-5/Projeto/Modulos/__pycache__/banco.cpython-35.pyc
+ create mode 100644 Aula-5/Projeto/Modulos/banco.py
+ create mode 100644 Aula-5/Projeto/app.py
+ create mode 100644 Aula-5/feature/funcionalidade.feature
+ create mode 100644 Aula-5/feature/steps/steps.py
+ create mode 100644 Aula-5/tdd.py
+ create mode 100644 Aula-5/tdd2.py
+ create mode 100644 tmp/banco1.py
+ create mode 100644 tmp/banco2.py
+ create mode 100644 tmp/exerc7.py
+ create mode 100644 tmp/exerc8.py
+developer@developer:~/520$ sudo git
+add                  cherry-pick          fsck                 mergetool            replace              submodule
+am                   clean                gc                   mv                   request-pull         subtree
+annotate             clone                get-tar-commit-id    name-rev             reset                tag
+apply                commit               grep                 notes                revert               verify-commit
+archive              config               help                 pull                 rm                   whatchanged
+bisect               describe             imap-send            push                 shortlog             worktree
+blame                diff                 init                 rebase               show
+branch               difftool             instaweb             reflog               show-branch
+bundle               fetch                interpret-trailers   relink               stage
+checkout             filter-branch        log                  remote               stash
+cherry               format-patch         merge                repack               status
+developer@developer:~/520$ sudo git
+add                  cherry-pick          fsck                 mergetool            replace              submodule
+am                   clean                gc                   mv                   request-pull         subtree
+annotate             clone                get-tar-commit-id    name-rev             reset                tag
+apply                commit               grep                 notes                revert               verify-commit
+archive              config               help                 pull                 rm                   whatchanged
+bisect               describe             imap-send            push                 shortlog             worktree
+blame                diff                 init                 rebase               show
+branch               difftool             instaweb             reflog               show-branch
+bundle               fetch                interpret-trailers   relink               stage
+checkout             filter-branch        log                  remote               stash
+cherry               format-patch         merge                repack               status
+developer@developer:~/520$ sudo git pu
+pull   push
+developer@developer:~/520$ sudo git pu
+pull   push
+developer@developer:~/520$ sudo git push origin
+origin    origin2
+developer@developer:~/520$ sudo git push origin
+FETCH_HEAD       HEAD             master           ORIG_HEAD        origin2/master   origin/master
+developer@developer:~/520$ sudo git push origin master
+Username for 'https://github.com': alexandrepiza
+Password for 'https://alexandrepiza@github.com':
+Counting objects: 20, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (20/20), 3.75 KiB | 0 bytes/s, done.
+Total 20 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), completed with 1 local object.
+To https://github.com/alexandrepiza/520.git
+   4f73df8..5b9cf78  master -> master
+developer@developer:~/520$ which java
+/usr/bin/java
+developer@developer:~/520$
+developer@developer:~/520$
